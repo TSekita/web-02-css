@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Monitor</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Machine Monitor</h1>
+      <p>工場内の機器と現在の稼働状態を確認する静的な監視画面です。</p>
+    </header>
+
+    <main id="machine-monitor">
+      <section aria-labelledby="status-heading">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Current status</p>
+            <h2 id="status-heading">現在の稼働状況</h2>
+          </div>
+          <p>最終確認: 2026-08-24 09:00</p>
+        </div>
+
+        <div class="machine-list">
+          <article class="machine">
+            <div class="machine-heading">
+              <h3>Machine-A</h3>
+              <p class="machine-status status-online">Online</p>
+            </div>
+            <p>組立ラインの機器です。現在は正常に稼働しています。</p>
+          </article>
+
+          <article class="machine">
+            <div class="machine-heading">
+              <h3>Machine-B</h3>
+              <p class="machine-status status-offline">Offline</p>
+            </div>
+            <p>検査ラインの機器です。現在は停止しています。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="machine-table-section" aria-labelledby="list-heading">
+        <p class="section-label">Machine list</p>
+        <h2 id="list-heading">機器一覧</h2>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">機器名</th>
+                <th scope="col">設置場所</th>
+                <th scope="col">状態</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Machine-A</th>
+                <td>組立ライン</td>
+                <td><span class="machine-status status-online">Online</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Machine-B</th>
+                <td>検査ライン</td>
+                <td><span class="machine-status status-offline">Offline</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="operation-section" aria-labelledby="operation-heading">
+        <p class="section-label">Operations</p>
+        <h2 id="operation-heading">操作</h2>
+        <p>この段階では表示のみを学習するため、ボタンを押しても状態は変わりません。</p>
+        <div class="actions">
+          <button type="button">状態を確認</button>
+          <button class="secondary-button" type="button">一覧を更新</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Machine Monitor — HTMLとCSSの基礎学習</p>
+    </footer>
+  </body>
+</html>
